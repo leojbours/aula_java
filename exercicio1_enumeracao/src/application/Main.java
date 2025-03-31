@@ -66,16 +66,7 @@ public class Main {
 		
 		System.out.println(dateToFind);
 		
-		double income = worker.getBaseSalary();
-		
-		for (HourContract contract : worker.getContracts()) {
-			
-			YearMonth dateComparison = YearMonth.of(contract.getDate().getYear(), contract.getDate().getMonthValue());
-			if (dateToFind.equals(dateComparison)) {
-				income += contract.totalValue();
-			}
-			
-		}
+		double income = worker.income(dateToFind);
 		
 		System.out.println("Name: " + worker.getName());
 		System.out.println("Department: " + worker.getDepartment().getName());

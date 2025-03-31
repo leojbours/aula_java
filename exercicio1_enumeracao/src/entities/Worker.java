@@ -1,5 +1,6 @@
 package entities;
 
+import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,14 +70,16 @@ public class Worker {
 		contracts.remove(contract);
 	}
 		
-	public Double income(Integer year, Integer mouth){
+	public Double income(YearMonth dateToFind){
 		double sum = 0.0;
 		sum += baseSalary;
 		
 		for (HourContract contract : contracts) {
-			sum += contract.totalValue();
+			YearMonth dateComparison = YearMonth.of(contract.getDate().getYear(), contract.getDate().getMonthValue());
+			if (dateToFind.equals(dateComparison)) {
+				sum += contract.totalValue();
+			}
 		}
-		
 		return sum;
 	}
 }
