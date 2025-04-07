@@ -70,7 +70,7 @@ public class Post {
 	public String toString() {
 		//String Builder usado para otimizar o programa, como as strings podem ser muito grandes
 		//é usado o StringBuilder pois otimiza o código melhor que concatenar as strings com +
-		StringBuilder sb = new StringBuilder ();
+		StringBuilder sb = new StringBuilder();
 		sb.append(title + "\n");
 		sb.append(likes);
 		sb.append(" Likes - ");
