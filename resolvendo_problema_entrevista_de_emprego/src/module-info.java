@@ -4,5 +4,5 @@
 /**
  * 
  */
-module resolvendo_problema_benoit {
+module resolvendo_problema_entrevista_estagio {
 }

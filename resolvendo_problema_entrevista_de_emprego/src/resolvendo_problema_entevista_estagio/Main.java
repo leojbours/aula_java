@@ -1,4 +1,4 @@
-package resolvendo_problema_benoit;
+package resolvendo_problema_entrevista_estagio;
 
 public class Main {
 
