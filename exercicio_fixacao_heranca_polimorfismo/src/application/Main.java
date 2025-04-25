@@ -17,13 +17,13 @@ public class Main {
 		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Digite o números de produtos a serem cadastrados: ");
+		System.out.print("Digite o número de produtos a serem cadastrados: ");
 		int n = sc.nextInt();
 		
 		Product[] products = new Product[n];
 		
 		for (int i = 0; i < n; i++) {
-			System.out.println("Informacões do produto #" + (i+1));
+			System.out.println("Informações do produto #" + (i+1));
 			System.out.print("Comum, usado ou importado (c/u/i)? ");
 			char opcao = sc.next().toLowerCase().charAt(0);
 			
@@ -37,20 +37,20 @@ public class Main {
 			String nome = sc.nextLine();
 			
 			System.out.print("Price: ");
-			double price = sc.nextDouble();
+			double preco = sc.nextDouble();
 			
 			sc.nextLine();
 			
 			if (opcao == 'u') {
 				System.out.print("Data de fabricação (dd/MM/yyyy): ");
 				LocalDate manufactureDate = LocalDate.parse(sc.nextLine(), fmt1);
-				products[i] = new UsedProduct(nome, price, manufactureDate);
+				products[i] = new UsedProduct(nome, preco, manufactureDate);
 			} else if (opcao == 'i') {
 				System.out.print("Taxa de importação: ");
 				double customsFee = sc.nextDouble();
-				products[i] = new ImportedProduct(nome, price, customsFee);
+				products[i] = new ImportedProduct(nome, preco, customsFee);
 			} else {
-				products[i] = new Product(nome, price);
+				products[i] = new Product(nome, preco);
 			}
 			
 		}
