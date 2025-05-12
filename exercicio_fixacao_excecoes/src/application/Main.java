@@ -79,11 +79,12 @@ public class Main {
 			
 		} catch (RuntimeException e) {
 			System.out.println("Ocorreu um erro inesperado");
+		} finally {
+			sc.close();
 		}
 		
 		System.out.println("Sistema encerrado.");
 		
-		sc.close();
 	}
 	 
 }
