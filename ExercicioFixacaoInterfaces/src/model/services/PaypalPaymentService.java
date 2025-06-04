@@ -8,13 +8,13 @@ public class PaypalPaymentService implements PaymentService
     @Override
     public double tax( double value )
     {
-        return value * tax;
+        return value + value * tax;
     }
     
     @Override
-    public double fee( double value )
+    public double fee( double value, int months )
     {
-        return value * monthlyFee;
+        return value + ( value * months ) * monthlyFee;
     }
     
     public double getTax()
