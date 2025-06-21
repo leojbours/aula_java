@@ -81,9 +81,8 @@ public class Main {
 			System.out.println("Ocorreu um erro inesperado");
 		} finally {
 			sc.close();
+			System.out.println("Sistema encerrado.");
 		}
-		
-		System.out.println("Sistema encerrado.");
 		
 	}
 	 
