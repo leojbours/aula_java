@@ -1,9 +1,9 @@
 package util;
 
 import java.io.File;
-import java.util.List;
+import java.util.Collection;
 
 public interface Reader<T>
 {
-    public List<T> read( File file );
+    Collection<T> read( File file );
 }

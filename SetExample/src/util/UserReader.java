@@ -8,13 +8,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class UserReader
     implements Reader<UserLogin>
 {
     @Override
-    public List<UserLogin> read( File file )
+    public Collection<UserLogin> read( File file )
     {
         List<UserLogin> userLogins = new ArrayList<>();
         
