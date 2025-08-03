@@ -28,8 +28,7 @@ local.properties
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-/.idea
-/.idea/*
+.idea/
 *.iml
 
 # External tool builders
@@ -165,5 +164,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# MacOS
+.DS_Store/
+.DS_Store
 
 # End of https://www.gitignore.io/api/git,java,maven,eclipse,windows
