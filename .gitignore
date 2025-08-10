@@ -165,7 +165,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # MacOS
-.DS_Store/
 .DS_Store
 
 # End of https://www.gitignore.io/api/git,java,maven,eclipse,windows
